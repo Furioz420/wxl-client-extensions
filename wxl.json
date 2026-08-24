@@ -1,0 +1,29 @@
+{
+  "manifest": 1,
+  "extension": {
+    "id": "wxl-client-extensions",
+    "version": "1.1.0",
+    "abi": "1.1",
+    "entry": "wxl-client-extensions.dll",
+    "assets": ["wxl-client-extensions.cfg"],
+    "requires": {
+      "wxl-runtime": ">=1.1.0"
+    },
+    "conflicts": [],
+    "hooks": []
+  },
+  "deploy": {
+    "mode": "release",
+    "match": "wxl-client-extensions-v*.zip"
+  },
+  "listing": {
+    "title": "Client Extensions Compatibility",
+    "tagline": "Compatibility helpers for addons and scripts written for the earlier Eunoia client-extension layer.",
+    "description": "store/description.md",
+    "gallery": [],
+    "categories": ["framework", "compatibility", "interface"],
+    "accent": "#6f7f98"
+  },
+  "license": "GPL-3.0-or-later",
+  "signature": null
+}
