@@ -34,4 +34,8 @@ namespace wxl_client_extensions::opcodes
     constexpr uint16_t SmsgDisplayToast                  = 0x0535;
     constexpr uint16_t SmsgQuestKillEntries              = 0x0536;
     constexpr uint16_t SmsgQuestCorpsePosition           = 0x0537;
+    constexpr uint16_t CmsgPvpJoinArena                  = 0x0538;
+    constexpr uint16_t CmsgPvpJoinEpicBattleground       = 0x0539;
+    constexpr uint16_t CmsgWeeklyRewardsRequestState     = 0x053A;
+    constexpr uint16_t SmsgWeeklyRewardsState            = 0x053B;
 }

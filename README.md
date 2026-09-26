@@ -31,3 +31,13 @@ contracts and a clean standalone build.
 ## License
 
 GPL-3.0-or-later. See `LICENSE`.
+
+## Integration and release checks
+
+Build the `wxl-client-extensions` Win32 Release target with the matching WXL core and Runtime 1.1 APIs. Install its DLL and reviewed config under `Extensions/wxl-client-extensions`, after Runtime. This compatibility layer contains no client archives or server implementation. Packet users must provide server handlers with the same numeric assignments; the current catalog includes arena (`0x0538`), epic battleground (`0x0539`), and weekly-reward request/state (`0x053A`/`0x053B`) names.
+
+Check the module load log, call `GetWXLClientExtensionsVersion()` and one script helper, then exercise a packet round trip only with its matching server feature installed. Confirm stock login and Warden behavior remain intact. Preserve the previous DLL/config for rollback. The repository's `main` workflow publishes automatically against moving upstream `v1.1`; keep this draft until that core and package have been validated.
+
+## Credits
+
+The WXL core ABI and original module interfaces come from WarcraftXL contributors. The local v1.1 integration commits in this snapshot are attributed to Furioz in the integration history. Preserve source-file notices and the GPL-3.0-or-later `LICENSE` when redistributing source or binaries.
